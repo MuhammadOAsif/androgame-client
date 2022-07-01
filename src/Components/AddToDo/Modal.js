@@ -1,6 +1,6 @@
+
 const Modal = ({ date, name }) => {
   const modalFormSubmitData = (event) => {
-    // event.preventDefault();
     const name = event.target?.name.value;
     const date = event.target?.date.value;
     const massage = event.target?.massage.value;
@@ -57,7 +57,7 @@ const Modal = ({ date, name }) => {
             <div className="modal-body relative p-4">
               <div className="block p-6 rounded-lg shadow-lg bg-[#5681A0] max-w-md">
                 {/* /////////////////// Form //////////////////////////// */}
-                <form onSubmit={modalFormSubmitData(onSubmit)}>
+                <form onSubmit={modalFormSubmitData(onSubmit)} action>
                   <div className="form-group mb-6">
                     <input
                       type="text"
@@ -135,7 +135,6 @@ const Modal = ({ date, name }) => {
                     <button
                       type="submit"
                       className="inline-block px-6 py-2.5 bg-[#5580a0] text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:[#5580a0] hover:shadow-lg focus:bg-[#5580a0] focus:shadow-lg focus:outline-none focus:ring-0 active:bg-[#5580a0]active:shadow-lg transition duration-150 ease-in-out"
-                      data-bs-submit="modal"
                     >
                       Submit
                     </button>
